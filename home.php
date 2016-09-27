@@ -40,8 +40,8 @@
         <?php for ($i=0; $i <30; $i++) { ?>
         <tr>
           <td class='time'><font size="3"><?php echo $date; ?></font><br><?php echo $day; ?></td>
-          <td class='cs335 blue' data-tooltip='Software Engineering &amp; Software Process'>CS335 [JH1]</td>
-          <td class='cs426 purple' data-tooltip='Computer Graphics'>CS426 [CS1]</td>
+          <td class='cs335 red' data-tooltip='Booked, By <?php echo $username; ?>'>CS335 [JH1]</td>
+          <td class='cs426 green' data-tooltip='Available'>CS426 [CS1]</td>
           <td></td>
           <td></td>
           <td>-</td>
