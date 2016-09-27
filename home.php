@@ -4,9 +4,14 @@
   $username = $_SESSION['login_user'];
   //echo $username;
 
-  if (isset($_SESSION['login_user']) === true) {
-    # code...
-  }
+  //if (isset($_SESSION['login_user']) === true) {
+  //  $select_query = "SELECT * FROM booking"
+  //}
+  $dateobj = date_create(); //Creating Date Object
+  $timestamp = date_timestamp_get($dateobj); // Getting Timestamp
+  $date = date("d/m/Y",$timestamp);
+  $day = date("l",$timestamp);
+  $select_sql = "SELECT * FROM booking"
 ?>
 <!DOCTYPE html>
 <html >
@@ -16,7 +21,9 @@
       <link rel="stylesheet" href="css/table.css">  
   </head>
   <body>
-    <a href="logout.php">Logout</a>
+    <div>
+      <a href="logout.php">Logout</a>
+    </div>
     <!-- / College Timetable -->
     <div class='tab'>
       <table border='0' cellpadding='0' cellspacing='0'>
@@ -30,8 +37,9 @@
           <th>VIth Hour</th>
           <th>VIIth Hour</th>
         </tr>
+        <?php for ($i=0; $i <30; $i++) { ?>
         <tr>
-          <td class='time'>9.00</td>
+          <td class='time'><font size="3"><?php echo $date; ?></font><br><?php echo $day; ?></td>
           <td class='cs335 blue' data-tooltip='Software Engineering &amp; Software Process'>CS335 [JH1]</td>
           <td class='cs426 purple' data-tooltip='Computer Graphics'>CS426 [CS1]</td>
           <td></td>
@@ -40,7 +48,18 @@
           <td></td>
           <td></td>
         </tr>
-        <tr>
+        <?php 
+          $timestamp = $timestamp + 86400;
+          $date = date("d/m/Y",+$timestamp);
+          $day = date("l",+$timestamp);
+          if ($day == "Sunday") {
+            $timestamp = $timestamp + 86400;
+            $date = date("d/m/Y",+$timestamp);
+            $day = date("l",+$timestamp);
+            $i=$i+1;
+          }
+        } ?>
+        <!--<tr>
           <td class='time'>10.00</td>
           <td></td>
           <td class='cs335 blue lab' data-tooltip='Software Engineering &amp; Software Process'>CS335 [Lab]</td>
@@ -119,7 +138,7 @@
           <td>-</td>
           <td></td>
           <td></td>
-        </tr>
+        </tr>-->
       </table>
     </div>  
   </body>
