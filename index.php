@@ -1,8 +1,3 @@
-<?php
-  include 'security/validate_login.php';
-  include 'security/validate_reg.php';
-?>
-
 <!DOCTYPE html>
 <html >
   <head>
@@ -49,23 +44,23 @@
         </h1>
         <form method="post" action="security/validate_reg.php">
           <div class="input-container">
-            <input type="text" id="Username" required="required"/>
+            <input type="text" name="Username" id="Username" required="required"/>
             <label for="Username">Username</label>
           <div class="bar"></div>
         </div>
         <div class="input-container">
-          <input type="password" id="Password" required="required"/>
+          <input type="password" name="Password" id="Password" required="required"/>
           <label for="Password">Password</label>
           <div class="bar"></div>
         </div>
         <div class="input-container">
-          <input type="password" id="Repeat Password" required="required"/>
+          <input type="password" name="Repeat_Password" id="Repeat_Password" required="required"/>
           <label for="Repeat Password">Repeat Password</label>
           <div class="bar"></div>
         </div>
         <div class="input-container">
-          <input type="text" id="staffid" required="required"/>
-          <label for="Staffid">Staffid</label>
+          <input type="text" name="StaffId" id="StaffId" required="required"/>
+          <label for="StaffId">StaffId</label>
           <div class="bar"></div>
         </div>
         <div class="button-container">
