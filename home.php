@@ -1,12 +1,18 @@
 <?php
-  session_start();
   include 'security/session.php';
+
+  $username = $_SESSION['login_user'];
+  //echo $username;
+
+  if (isset($_SESSION['login_user']) === true) {
+    # code...
+  }
 ?>
 <!DOCTYPE html>
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>Flat University Timetable</title>
+    <title>Timetable</title>
       <link rel="stylesheet" href="css/table.css">  
   </head>
   <body>
