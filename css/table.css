@@ -23,11 +23,6 @@
   background: #f39c12;
 }
 
-.cs335, .cs426, .md303, .md352, .md313, .cs240 {
-  font-weight: 300;
-  cursor: pointer;
-}
-
 body {
   background: #ffffff;
   padding: 20px;
@@ -48,6 +43,7 @@ table {
   color: #efefef;
   height: 100%;
   width: 100%;
+
 }
 table tr:nth-child(2n) {
   background: #eff0f1;

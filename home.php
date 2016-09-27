@@ -25,7 +25,7 @@
       <a href="logout.php">Logout</a>
     </div>
     <!-- / College Timetable -->
-    <div class='tab'>
+    <div class='tab' style="text-align: center;">
       <table border='0' cellpadding='0' cellspacing='0'>
         <tr class='days'>
           <th></th>
@@ -40,8 +40,8 @@
         <?php for ($i=0; $i <30; $i++) { ?>
         <tr>
           <td class='time'><font size="3"><?php echo $date; ?></font><br><?php echo $day; ?></td>
-          <td class='cs335 red' data-tooltip='Booked, By <?php echo $username; ?>'>CS335 [JH1]</td>
-          <td class='cs426 green' data-tooltip='Available'>CS426 [CS1]</td>
+          <td class='red' data-tooltip='Booked by <?php echo $username; ?>'>NOT AVAILABLE</td>
+          <td class='green' data-tooltip='Available'>BOOK NOW</td>
           <td></td>
           <td></td>
           <td>-</td>
