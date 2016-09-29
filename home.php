@@ -11,7 +11,7 @@
   $timestamp = date_timestamp_get($dateobj); // Getting Timestamp
   $date = date("d/m/Y",$timestamp);
   $day = date("l",$timestamp);
-  $select_sql = "SELECT * FROM booking"
+  $status_sql = "SELECT status FROM booking WHERE date = $date";
 ?>
 <!DOCTYPE html>
 <html >
@@ -44,7 +44,7 @@
           <td class='green' data-tooltip='Available'>BOOK NOW</td>
           <td></td>
           <td></td>
-          <td>-</td>
+          <td></td>
           <td></td>
           <td></td>
         </tr>

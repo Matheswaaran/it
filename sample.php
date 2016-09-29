@@ -28,6 +28,21 @@
 		echo "</tr>";
 	}
 	echo "</table>";
+
+	$times = 1475064591;
+	$tinc = 86400;
+	$times = $times + (2*$tinc);
+	//echo $times;
+	$date = date("Y-m-d" , +$times);
+	//echo $date;
+	$status_sql = "SELECT * FROM booking WHERE bookdate = '$date'";
+	$status = mysqli_query($db,$status_sql);
+	$row = mysqli_fetch_array($status);
+	$res_date = $row['bookdate'];
+	echo date("d/m/Y",strtotime($res_date));
+	echo "<br>";
+	echo $res_date;
+	//$myinput='2005/15/09'; $sqldate=date('d-m-Y',strtotime($myinput)); echo $sqldate;
 ?>
 </body>
 </html>
