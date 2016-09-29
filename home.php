@@ -43,7 +43,7 @@
           <?php if ($query_result['hour1'] === null){ ?>
             <td class='green' data-tooltip='Available'>BOOK NOW</td>
           <?php }else { ?>
-            <td class='red' data-tooltip='Booked by <?php echo $username; ?>'>NOT AVAILABLE</td>
+            <td class='red' data-tooltip='Booked by <?php echo $query_result['hour1']; ?>'>NOT AVAILABLE</td>
           <?php } ?>
 
 
@@ -51,7 +51,7 @@
           <?php if ($query_result['hour2'] === null){ ?>
             <td class='green' data-tooltip='Available'>BOOK NOW</td>
           <?php }else { ?>
-            <td class='red' data-tooltip='Booked by <?php echo $username; ?>'>NOT AVAILABLE</td>
+            <td class='red' data-tooltip='Booked by <?php echo $query_result['hour2']; ?>'>NOT AVAILABLE</td>
           <?php } ?>
 
 
@@ -59,7 +59,7 @@
           <?php if ($query_result['hour3'] === null){ ?>
             <td class='green' data-tooltip='Available'>BOOK NOW</td>
           <?php }else { ?>
-            <td class='red' data-tooltip='Booked by <?php echo $username; ?>'>NOT AVAILABLE</td>
+            <td class='red' data-tooltip='Booked by <?php echo $query_result['hour3']; ?>'>NOT AVAILABLE</td>
           <?php } ?>
 
 
@@ -67,7 +67,7 @@
           <?php if ($query_result['hour4'] === null){ ?>
             <td class='green' data-tooltip='Available'>BOOK NOW</td>
           <?php }else { ?>
-            <td class='red' data-tooltip='Booked by <?php echo $username; ?>'>NOT AVAILABLE</td>
+            <td class='red' data-tooltip='Booked by <?php echo $query_result['hour4']; ?>'>NOT AVAILABLE</td>
           <?php } ?>
 
 
@@ -75,7 +75,7 @@
           <?php if ($query_result['hour5'] === null){ ?>
             <td class='green' data-tooltip='Available'>BOOK NOW</td>
           <?php }else { ?>
-            <td class='red' data-tooltip='Booked by <?php echo $username; ?>'>NOT AVAILABLE</td>
+            <td class='red' data-tooltip='Booked by <?php echo $query_result['hour5']; ?>'>NOT AVAILABLE</td>
           <?php } ?>
 
 
@@ -83,7 +83,7 @@
           <?php if ($query_result['hour6'] === null){ ?>
             <td class='green' data-tooltip='Available'>BOOK NOW</td>
           <?php }else { ?>
-            <td class='red' data-tooltip='Booked by <?php echo $username; ?>'>NOT AVAILABLE</td>
+            <td class='red' data-tooltip='Booked by <?php echo $query_result['hour6']; ?>'>NOT AVAILABLE</td>
           <?php } ?>
 
 
@@ -91,7 +91,7 @@
           <?php if ($query_result['hour7'] === null){ ?>
             <td class='green' data-tooltip='Available'>BOOK NOW</td>
           <?php }else { ?>
-            <td class='red' data-tooltip='Booked by <?php echo $username; ?>'>NOT AVAILABLE</td>
+            <td class='red' data-tooltip='Booked by <?php echo $query_result['hour7']; ?>'>NOT AVAILABLE</td>
           <?php } ?>
         </tr>
         <?php 
