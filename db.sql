@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 27, 2016 at 06:53 PM
+-- Generation Time: Sep 29, 2016 at 04:10 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -29,12 +29,16 @@ USE `projector`;
 --
 
 CREATE TABLE `booking` (
-  `id` int(11) NOT NULL,
-  `date` date NOT NULL,
-  `day` varchar(9) NOT NULL,
-  `hour` int(1) NOT NULL,
-  `status` int(1) NOT NULL,
-  `username` varchar(50) NOT NULL
+  `bookid` int(11) NOT NULL,
+  `bookdate` date NOT NULL,
+  `bookday` varchar(10) NOT NULL,
+  `hour1` varchar(50) NOT NULL,
+  `hour2` varchar(50) NOT NULL,
+  `hour3` varchar(50) NOT NULL,
+  `hour4` varchar(50) NOT NULL,
+  `hour5` varchar(50) NOT NULL,
+  `hour6` varchar(50) NOT NULL,
+  `hour7` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -67,7 +71,7 @@ INSERT INTO `users` (`uid`, `username`, `password`, `staffid`, `created`) VALUES
 -- Indexes for table `booking`
 --
 ALTER TABLE `booking`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`bookid`);
 
 --
 -- Indexes for table `users`
@@ -83,7 +87,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `bookid` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `users`
 --
