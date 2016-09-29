@@ -2,16 +2,12 @@
   include 'security/session.php';
 
   $username = $_SESSION['login_user'];
-  //echo $username;
 
-  //if (isset($_SESSION['login_user']) === true) {
-  //  $select_query = "SELECT * FROM booking"
-  //}
   $dateobj = date_create(); //Creating Date Object
   $timestamp = date_timestamp_get($dateobj); // Getting Timestamp
   $date = date("d/m/Y",$timestamp);
   $day = date("l",$timestamp);
-  $status_sql = "SELECT status FROM booking WHERE date = $date";
+  $select_sql = "SELECT * FROM booking WHERE bookdate = $date";
 ?>
 <!DOCTYPE html>
 <html >
@@ -24,7 +20,7 @@
     <div>
       <a href="logout.php">Logout</a>
     </div>
-    <!-- / College Timetable -->
+    <!-- Booking Timetable -->
     <div class='tab' style="text-align: center;">
       <table border='0' cellpadding='0' cellspacing='0'>
         <tr class='days'>
@@ -37,16 +33,66 @@
           <th>VIth Hour</th>
           <th>VIIth Hour</th>
         </tr>
-        <?php for ($i=0; $i <30; $i++) { ?>
+        <?php for ($i=0; $i <30; $i++) { 
+          $select_result = mysqli_query($db,$select_sql);
+          $query_result = mysqli_fetch_array($select_result);
+        ?>
         <tr>
           <td class='time'><font size="3"><?php echo $date; ?></font><br><?php echo $day; ?></td>
-          <td class='red' data-tooltip='Booked by <?php echo $username; ?>'>NOT AVAILABLE</td>
-          <td class='green' data-tooltip='Available'>BOOK NOW</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <!-- Hour 1 -->
+          <?php if ($query_result['hour1'] === null){ ?>
+            <td class='green' data-tooltip='Available'>BOOK NOW</td>
+          <?php }else { ?>
+            <td class='red' data-tooltip='Booked by <?php echo $username; ?>'>NOT AVAILABLE</td>
+          <?php } ?>
+
+
+          <!-- Hour 2 -->
+          <?php if ($query_result['hour2'] === null){ ?>
+            <td class='green' data-tooltip='Available'>BOOK NOW</td>
+          <?php }else { ?>
+            <td class='red' data-tooltip='Booked by <?php echo $username; ?>'>NOT AVAILABLE</td>
+          <?php } ?>
+
+
+          <!-- Hour 3 -->
+          <?php if ($query_result['hour3'] === null){ ?>
+            <td class='green' data-tooltip='Available'>BOOK NOW</td>
+          <?php }else { ?>
+            <td class='red' data-tooltip='Booked by <?php echo $username; ?>'>NOT AVAILABLE</td>
+          <?php } ?>
+
+
+          <!-- Hour 4 -->
+          <?php if ($query_result['hour4'] === null){ ?>
+            <td class='green' data-tooltip='Available'>BOOK NOW</td>
+          <?php }else { ?>
+            <td class='red' data-tooltip='Booked by <?php echo $username; ?>'>NOT AVAILABLE</td>
+          <?php } ?>
+
+
+          <!-- Hour 5 -->
+          <?php if ($query_result['hour5'] === null){ ?>
+            <td class='green' data-tooltip='Available'>BOOK NOW</td>
+          <?php }else { ?>
+            <td class='red' data-tooltip='Booked by <?php echo $username; ?>'>NOT AVAILABLE</td>
+          <?php } ?>
+
+
+          <!-- Hour 6 -->
+          <?php if ($query_result['hour6'] === null){ ?>
+            <td class='green' data-tooltip='Available'>BOOK NOW</td>
+          <?php }else { ?>
+            <td class='red' data-tooltip='Booked by <?php echo $username; ?>'>NOT AVAILABLE</td>
+          <?php } ?>
+
+
+          <!-- Hour 7 -->
+          <?php if ($query_result['hour7'] === null){ ?>
+            <td class='green' data-tooltip='Available'>BOOK NOW</td>
+          <?php }else { ?>
+            <td class='red' data-tooltip='Booked by <?php echo $username; ?>'>NOT AVAILABLE</td>
+          <?php } ?>
         </tr>
         <?php 
           $timestamp = $timestamp + 86400;
@@ -59,87 +105,8 @@
             $i=$i+1;
           }
         } ?>
-        <!--<tr>
-          <td class='time'>10.00</td>
-          <td></td>
-          <td class='cs335 blue lab' data-tooltip='Software Engineering &amp; Software Process'>CS335 [Lab]</td>
-          <td class='md352 green' data-tooltip='Multimedia Production &amp; Management'>MD352 [Kairos]</td>
-          <td></td>
-          <td>-</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td class='time'>11.00</td>
-          <td></td>
-          <td class='cs335 blue lab' data-tooltip='Software Engineering &amp; Software Process'>CS335 [Lab]</td>
-          <td class='md352 green' data-tooltip='Multimedia Production &amp; Management'>MD352 [Kairos]</td>
-          <td class='cs240 orange' data-tooltip='Operating Systems'>CS240 [CH]</td>
-          <td>-</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td class='time'>12.00</td>
-          <td></td>
-          <td class='md303 navy' data-tooltip='Media &amp; Globalisation'>MD303 [CS2]</td>
-          <td class='md313 red' data-tooltip='Special Topic: Multiculturalism &amp; Nationalism'>MD313 [Iontas]</td>
-          <td></td>
-          <td>-</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td class='time'>13.00</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>-</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td class='time'>14.00</td>
-          <td></td>
-          <td></td>
-          <td class='cs426 purple' data-tooltip='Computer Graphics'>CS426 [CS2]</td>
-          <td class='cs240 orange' data-tooltip='Operating Systems'>CS240 [TH1]</td>
-          <td>-</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td class='time'>15.00</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td class='cs240 orange lab' data-tooltip='Operating Systems'>CS240 [Lab]</td>
-          <td>-</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td class='time'>16.00</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td class='cs240 orange lab' data-tooltip='Operating Systems'>CS240 [Lab]</td>
-          <td>-</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td class='time'>17.00</td>
-          <td class='cs335 blue' data-tooltip='Software Engineering &amp; Software Process'>CS335 [TH1]</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>-</td>
-          <td></td>
-          <td></td>
-        </tr>-->
       </table>
     </div>  
+    <!-- / Booking Timetable -->
   </body>
 </html>
