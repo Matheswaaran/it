@@ -14,14 +14,19 @@
   <head>
     <meta charset="UTF-8">
     <title>Timetable</title>
-      <link rel="stylesheet" href="css/table.css">  
+      <link rel="stylesheet" href="css/table.css">
+      <link rel="stylesheet" href="css/nav.css">  
       <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script> 
       <script type="text/javascript" src="js/book.js"></script> 
   </head>
   <body>
-    <div>
-      <a href="logout.php">Logout</a>
-    </div>
+    <nav>
+      <ul>
+        <li><a class="active">Welcome &nbsp;&nbsp;<?php echo $username; ?></a></li>
+        <li style="float:right"><a href="logout.php">Logout</a></li>
+        <li style="float:right"><a href="home.php">Home</a></li>
+      </ul>
+    <nav><br>
     <!-- Booking Timetable -->
     <div class='tab' style="text-align: center;">
       <table border='0' cellpadding='0' cellspacing='0'>
@@ -36,8 +41,8 @@
           <th>VIIth Hour</th>
         </tr>
         <?php for ($i=0; $i <30; $i++) { 
-		$dbdate =  date("Y-m-d",$timestamp);
-		$select_sql = "SELECT * FROM booking WHERE bookdate = '$dbdate'";
+		      $dbdate =  date("Y-m-d",$timestamp);
+      		$select_sql = "SELECT * FROM booking WHERE bookdate = '$dbdate'";
           $select_result = mysqli_query($db,$select_sql);
           $query_result = mysqli_fetch_array($select_result);
         ?>
@@ -46,57 +51,72 @@
           <!-- Hour 1 -->
           <?php if ($query_result['hour1'] == ''){ ?>
             <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','1')">BOOK NOW</a></td>
-          <?php }else { ?>
+          <?php }else { 
+                    if ($query_result['hour1'] == $username){ ?>
+                      <td class='orange' data-tooltip='Click to cancel'><a href="javascript://" onClick="updateCancelstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','1')">CANCEL BOOKING</a></td>
+                      <?php } else { ?>
             <td class='red' data-tooltip='Booked by <?php echo $query_result['hour1']; ?>'>NOT AVAILABLE</td>
-          <?php } ?>
-
+          <?php } } ?>
 
           <!-- Hour 2 -->
           <?php if ($query_result['hour2'] == ''){ ?>
-            <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','2')" >BOOK NOW</a></td>
-          <?php }else { ?>
+            <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','2')">BOOK NOW</a></td>
+          <?php }else { 
+                    if ($query_result['hour2'] == $username){ ?>
+                      <td class='orange' data-tooltip='Click to cancel'><a href="javascript://" onClick="updateCancelstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','2')">CANCEL BOOKING</a></td>
+                      <?php } else { ?>
             <td class='red' data-tooltip='Booked by <?php echo $query_result['hour2']; ?>'>NOT AVAILABLE</td>
-          <?php } ?>
-
+          <?php } } ?>
 
           <!-- Hour 3 -->
           <?php if ($query_result['hour3'] == ''){ ?>
             <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','3')">BOOK NOW</a></td>
-          <?php }else { ?>
+          <?php }else { 
+                    if ($query_result['hour3'] == $username){ ?>
+                      <td class='orange' data-tooltip='Click to cancel'><a href="javascript://" onClick="updateCancelstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','3')">CANCEL BOOKING</a></td>
+                      <?php } else { ?>
             <td class='red' data-tooltip='Booked by <?php echo $query_result['hour3']; ?>'>NOT AVAILABLE</td>
-          <?php } ?>
+          <?php } } ?>
 
-
-          <!-- Hour 4 -->
+          <!-- Hour 1 -->
           <?php if ($query_result['hour4'] == ''){ ?>
             <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','4')">BOOK NOW</a></td>
-          <?php }else { ?>
+          <?php }else { 
+                    if ($query_result['hour4'] == $username){ ?>
+                      <td class='orange' data-tooltip='Click to cancel'><a href="javascript://" onClick="updateCancelstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','4')">CANCEL BOOKING</a></td>
+                      <?php } else { ?>
             <td class='red' data-tooltip='Booked by <?php echo $query_result['hour4']; ?>'>NOT AVAILABLE</td>
-          <?php } ?>
+          <?php } } ?>
 
-
-          <!-- Hour 5 -->
+          <!-- Hour 1 -->
           <?php if ($query_result['hour5'] == ''){ ?>
             <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','5')">BOOK NOW</a></td>
-          <?php }else { ?>
+          <?php }else { 
+                    if ($query_result['hour5'] == $username){ ?>
+                      <td class='orange' data-tooltip='Click to cancel'><a href="javascript://" onClick="updateCancelstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','5')">CANCEL BOOKING</a></td>
+                      <?php } else { ?>
             <td class='red' data-tooltip='Booked by <?php echo $query_result['hour5']; ?>'>NOT AVAILABLE</td>
-          <?php } ?>
+          <?php } } ?>
 
-
-          <!-- Hour 6 -->
+          <!-- Hour 1 -->
           <?php if ($query_result['hour6'] == ''){ ?>
             <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','6')">BOOK NOW</a></td>
-          <?php }else { ?>
+          <?php }else { 
+                    if ($query_result['hour6'] == $username){ ?>
+                      <td class='orange' data-tooltip='Click to cancel'><a href="javascript://" onClick="updateCancelstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','6')">CANCEL BOOKING</a></td>
+                      <?php } else { ?>
             <td class='red' data-tooltip='Booked by <?php echo $query_result['hour6']; ?>'>NOT AVAILABLE</td>
-          <?php } ?>
+          <?php } } ?>
 
-
-          <!-- Hour 7 -->
+          <!-- Hour 1 -->
           <?php if ($query_result['hour7'] == ''){ ?>
             <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','7')">BOOK NOW</a></td>
-          <?php }else { ?>
+          <?php }else { 
+                    if ($query_result['hour7'] == $username){ ?>
+                      <td class='orange' data-tooltip='Click to cancel'><a href="javascript://" onClick="updateCancelstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','7')">CANCEL BOOKING</a></td>
+                      <?php } else { ?>
             <td class='red' data-tooltip='Booked by <?php echo $query_result['hour7']; ?>'>NOT AVAILABLE</td>
-          <?php } ?>
+          <?php } } ?>
         </tr>
         <?php 
           $timestamp = $timestamp + 86400;

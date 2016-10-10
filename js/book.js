@@ -13,7 +13,7 @@ function updateBookstatus(date,day,hour){
 }
 function updateCancelstatus(date,day,hour){
 	$.ajax({                                      
-      url: 'book.php',
+      url: 'cancel.php',
       data: "date="+date+"&day="+day+"&hour="+hour,
 	  type:"POST",                        
       success: function(data){
