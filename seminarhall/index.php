@@ -1,5 +1,5 @@
 <?php
-  include 'security/session.php';
+  include '../security/session.php';
 
   $username = $_SESSION['login_user'];
 
@@ -14,17 +14,17 @@
   <head>
     <meta charset="UTF-8">
     <title>Timetable</title>
-      <link rel="stylesheet" href="css/table.css">
-      <link rel="stylesheet" href="css/nav.css">  
-      <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script> 
-      <script type="text/javascript" src="js/book.js"></script> 
+      <link rel="stylesheet" href="../css/table.css">
+      <link rel="stylesheet" href="../css/nav.css">  
+      <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script> 
+      <script type="text/javascript" src="../js/book.js"></script> 
   </head>
   <body>
     <nav>
       <ul>
         <li><a class="active">Welcome &nbsp;&nbsp;<?php echo $username; ?></a></li>
-        <li style="float:right"><a href="logout.php">Logout</a></li>
-        <li style="float:right"><a href="home.php">Home</a></li>
+        <li style="float:right"><a href="../security/logout.php">Logout</a></li>
+        <li style="float:right"><a href="../home.html">Home</a></li>
       </ul>
     <nav><br>
     <!-- Booking Timetable -->
@@ -42,7 +42,7 @@
         </tr>
         <?php for ($i=0; $i <30; $i++) { 
 		      $dbdate =  date("Y-m-d",$timestamp);
-      		$select_sql = "SELECT * FROM booking WHERE bookdate = '$dbdate'";
+      		$select_sql = "SELECT * FROM seminarhall WHERE bookdate = '$dbdate'";
           $select_result = mysqli_query($db,$select_sql);
           $query_result = mysqli_fetch_array($select_result);
         ?>
