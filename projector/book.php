@@ -15,7 +15,7 @@
 	if($row['0'] == 1){
 		$update_query = "UPDATE projector SET hour".$hour."= '".$username."' WHERE bookdate = '".$date."'";	
 	}else{
-		$update_query = "INSERT INTO projector (hour".$hour.",bookdate) values ('".$username."','".$date."')";	
+		$update_query = "INSERT INTO projector (hour".$hour.",bookdate,bookday) values ('".$username."','".$date."','".$day."')";	
 	}
 	mysqli_query($db,$update_query);
 	echo 'Successfully updated';

@@ -19,4 +19,14 @@
 	}else{
 		echo "Cancellation Failed";	
 	}
+
+	/*$select_sql = "SELECT * FROM projector WHERE bookdate = '".$date."'";
+	$delete_check = mysqli_query($db,$select_sql);
+	$rows = mysqli_fetch_array($delete_check);
+	for ($i=1; $i <=7 ; $i++) { 
+		if ($rows['hour$i'] == '') {
+			$del =0
+		}
+			$delete_sql = "DELETE FROM projector WHERE bookdate = '".$date."'";
+	}*/
 ?>
