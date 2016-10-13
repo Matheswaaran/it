@@ -16,8 +16,8 @@
     <title>Timetable</title>
       <link rel="stylesheet" href="css/table.css">
       <link rel="stylesheet" href="css/nav.css">  
-      <script type="text/javascript" src=".js/jquery-1.7.1.min.js"></script> 
-      <script type="text/javascript" src=".js/book.js"></script> 
+      <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script> 
+      <script type="text/javascript" src="js/book.js"></script> 
   </head>
   <body>
     <nav>
