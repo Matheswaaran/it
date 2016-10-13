@@ -23,8 +23,8 @@
     <nav>
       <ul>
         <li><a class="active">Welcome &nbsp;&nbsp;<?php echo $username; ?></a></li>
-        <li style="float:right"><a href="../security/logout.php">Logout</a></li>
-        <li style="float:right"><a href="../home.html">Home</a></li>
+        <li style="float:right"><a href="security/logout.php">Logout</a></li>
+        <li style="float:right"><a href="home.php">Home</a></li>
       </ul>
     <nav><br>
     <!-- Booking Timetable -->
