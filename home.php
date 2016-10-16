@@ -6,7 +6,10 @@
   $dateobj = date_create(); //Creating Date Object
   $timestamp = date_timestamp_get($dateobj); // Getting Timestamp
   $date = date("d/m/Y",$timestamp);
+  $dbdate=date("Y-m-d",$timestamp);
   $day = date("l",$timestamp);
+  $clear_sql = "DELETE FROM projector WHERE bookdate < '$dbdate'";
+  mysqli_query($db,$clear_sql);
   
 ?>
 <!DOCTYPE html>
