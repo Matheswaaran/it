@@ -31,6 +31,7 @@
     <nav>
       <ul>
         <li><a href="home.php">Home</a></li>
+        <li><a href="sample.html">Change Password</a></li>
         <li><a href="security/logout.php">Logout</a></li>
       </ul>
     </nav><br><br><br><br><br><br>
