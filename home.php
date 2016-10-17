@@ -8,6 +8,7 @@
   $date = date("d/m/Y",$timestamp);
   $dbdate=date("Y-m-d",$timestamp);
   $day = date("l",$timestamp);
+  //Clearing the old records...
   $clear_sql = "DELETE FROM projector WHERE bookdate < '$dbdate'";
   mysqli_query($db,$clear_sql);
   
@@ -23,13 +24,18 @@
       <script type="text/javascript" src="js/book.js"></script> 
   </head>
   <body>
+<!--navigation bar-->
+    <h2>Welcome &nbsp;&nbsp;</h2><h1>&nbsp;&nbsp;<?php echo $username; ?></h1>
+    <input id="burger" type="checkbox" />
+    <label for="burger"> <span></span> <span></span> <span></span> </label>
     <nav>
       <ul>
-        <li><a class="active">Welcome &nbsp;&nbsp;<?php echo $username; ?></a></li>
-        <li style="float:right"><a href="security/logout.php">Logout</a></li>
-        <li style="float:right"><a href="home.php">Home</a></li>
+        <li><a href="home.php">Home</a></li>
+        <li><a href="security/logout.php">Logout</a></li>
       </ul>
-    <nav><br>
+    </nav><br><br><br><br><br><br>
+
+<!--navigation bar-->
     <!-- Booking Timetable -->
     <div class='tab' style="text-align: center;">
       <table border='0' cellpadding='0' cellspacing='0'>
@@ -50,7 +56,7 @@
           $query_result = mysqli_fetch_array($select_result);
         ?>
         <tr>
-          <td class='time'><font size="3"><?php echo $date; ?></font><br><?php echo $day; ?></td>
+          <td class='time'><font size="3"><?php echo $date; ?></font><br><br><?php echo $day; ?></td>
           <!-- Hour 1 -->
           <?php if ($query_result['hour1'] == ''){ ?>
             <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','1')">BOOK NOW</a></td>
