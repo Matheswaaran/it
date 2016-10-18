@@ -18,12 +18,13 @@
 			$query = "insert into users(username,password,staffid) values('$username','$password','$staffid')";
 			if (mysqli_query($db,$query) === true) {
 				echo '<script> alert("Registration Successful");</script>';
-				header("Refresh:1 ; URL=../index.php");
+				echo '<script> window.location="../index.php"; </script>';
 			}else{
 				echo '<script> alert("Registration Error. Please Try again.");</script>';
 			}
 		}else{
 			echo '<script> alert("Password does not match");</script>';
+			echo '<script> window.location="../index.php"; </script>';
 		}
 	}
 ?>
