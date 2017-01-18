@@ -16,11 +16,14 @@
 		if ($new_pass == $renew_pass) {
 			$repass_sql = "UPDATE users SET password = '".$new_pass ."' WHERE username = '".$username."'";
 			mysqli_query($db,$repass_sql);
+			echo '<script> alert("Password Changed Successfully");</script>';
 			header("Refresh:1 ; URL=../home.php");
 		}else {
-			echo "Password does not match";
+			echo '<script> alert("Password does not match");</script>';
+			echo '<script> window.location="../changepass.html"; </script>';
 		}
 	}else {
-		echo "Current password is wrong. Please try again";
+		echo '<script> alert("The Current password is wrong. Please Try again.");</script>';
+		echo '<script> window.location="../changepass.html"; </script>';
 	}
 ?>

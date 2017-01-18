@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Repass</title>
+</head>		
+<body>
+	<link rel="stylesheet" href="css/repass.css">
+<!--
+	<form name="changepass" action="security/changepass.php" method="post">
+		Current Password :<input type="password" name="CurrentPassword"><br><br>
+		 New Password :<input type="password" name="NewPassword"><br><br>
+		 Re-type Password :<input type="password" name="ReNewPassword"><br><br>
+		<input type="submit" value="change it"><br><br>
+	</form>
+-->
+	<div class="container">  
+		<form id="contact" name="changepass" action="security/changepass.php" method="post">
+			<h3>Change Password</h3>
+    		<h4>Fill this form to change your password.</h4>
+    		<fieldset>
+      			<input placeholder="Current Password" name="CurrentPassword" type="password" tabindex="1" required autofocus>
+    		</fieldset>
+    		<fieldset>
+      			<input placeholder="New Password" name="NewPassword" type="password" tabindex="2" required>
+    		</fieldset>
+    		<fieldset>
+      			<input placeholder="Retype New Password" name="ReNewPassword" type="password" tabindex="3" required>
+    		</fieldset>
+    		<fieldset>
+      			<button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+			</fieldset>
+  		</form>
+	</div>
+</body>
+</html>
