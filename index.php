@@ -12,7 +12,7 @@
   <body>    
 <!-- Mixins-->
     <div class="pen-title">
-      <h1>Material Login Form</h1><span><i class='fa fa-code'></i> by <a href='https://gscpsnacet.github.io/'>Google Students Club</a></span>
+      <h1>Online Portal for Projector</h1><span><i class='fa fa-code'></i> by <a href='https://gscpsnacet.github.io/'>Google Students Club</a></span>
     </div>
     <!-- <div class="rerun"><a href="">Rerun Pen</a></div><br><br><br><br> -->
     <div class="container">
