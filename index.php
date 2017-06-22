@@ -11,11 +11,10 @@
 
   <body>    
 <!-- Mixins-->
-<!-- Pen Title
     <div class="pen-title">
-      <h1>Material Login Form</h1><span>Pen <i class='fa fa-code'></i> by <a href='http://andytran.me'>Andy Tran</a></span>
+      <h1>Online Portal for Projector</h1><span><i class='fa fa-code'></i> by <a href='https://gscpsnacet.github.io/'>Google Students Club</a></span>
     </div>
-    <div class="rerun"><a href="">Rerun Pen</a></div>--><br><br><br><br>
+    <!-- <div class="rerun"><a href="">Rerun Pen</a></div><br><br><br><br> -->
     <div class="container">
         <div class="card"></div>
         <div class="card">
