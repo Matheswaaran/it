@@ -9,7 +9,7 @@
   $dbdate=date("Y-m-d",$timestamp);
   $day = date("l",$timestamp);
   //Clearing the old records...
-  $clear_sql = "DELETE FROM projector WHERE bookdate < '$dbdate'";
+  // $clear_sql = "DELETE FROM projector WHERE bookdate < '$dbdate'";
   mysqli_query($db,$clear_sql);
   
 ?>

@@ -39,7 +39,7 @@
         </div>
       <div class="card alt">
         <div class="toggle"></div>
-        <h1 class="title">Register
+        <h1 class="title">Administrator Login
           <div class="close"></div>
         </h1>
         <form method="post" action="security/validate_reg.php">
