@@ -38,10 +38,10 @@
         </div>
       <div class="card alt">
         <div class="toggle"></div>
-        <h1 class="title">Administrator Login
+        <h1 class="title">Admin Login
           <div class="close"></div>
         </h1>
-        <form method="post" action="security/validate_reg.php">
+        <form method="post" action="security/validate_AdLogin.php">
           <div class="input-container">
             <input type="text" name="Username" id="Username" required="required"/>
             <label for="Username">Username</label>
@@ -52,18 +52,8 @@
           <label for="Password">Password</label>
           <div class="bar"></div>
         </div>
-        <div class="input-container">
-          <input type="password" name="Repeat_Password" id="Repeat_Password" required="required"/>
-          <label for="Repeat Password">Repeat Password</label>
-          <div class="bar"></div>
-        </div>
-        <div class="input-container">
-          <input type="text" name="StaffId" id="StaffId" required="required"/>
-          <label for="StaffId">StaffId</label>
-          <div class="bar"></div>
-        </div>
         <div class="button-container">
-          <button type="submit"><span>Next</span></button>
+          <button type="submit"><span>Login</span></button>
         </div>
       </form>
     </div>
