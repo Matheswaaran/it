@@ -1,7 +1,7 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: mat
- * Date: 24/6/17
- * Time: 2:11 PM
- */
+    include 'includes/sessionUtils.php';
+
+    $session = new sessionUtils();
+    if ($session->Logout()) {
+        echo '<script> window.location="../../index.html"; </script>';
+    }

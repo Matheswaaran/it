@@ -1,7 +1,7 @@
 // JavaScript Document
 function updateBookstatus(date,day,hour){
 	$.ajax({                                      
-      url: '../php/book.php',
+      url: 'php/book.php',
       data: "date="+date+"&day="+day+"&hour="+hour,
 	  type:"POST",                        
       success: function(data){
@@ -13,7 +13,7 @@ function updateBookstatus(date,day,hour){
 }
 function updateCancelstatus(date,day,hour){
 	$.ajax({                                      
-      url: '../php/cancel.php',
+      url: 'php/cancel.php',
       data: "date="+date+"&day="+day+"&hour="+hour,
 	  type:"POST",                        
       success: function(data){

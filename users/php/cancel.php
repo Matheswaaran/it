@@ -1,7 +1,7 @@
 <?php
-	include 'security/session.php';
+	include "includes/usession.php";
 	
-	$username = $_SESSION['login_user'];
+	$username = $_SESSION['user_username'];
 	
 	$date = date('Y-m-d',strtotime($_POST['date']));
 	$day = $_POST['day'];

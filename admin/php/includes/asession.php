@@ -9,7 +9,7 @@
         $login_user = $row['username'];
 
         if (!isset($_SESSION['admin_id']) && !isset($_SESSION['admin_username'])){
-            header("location: ../index.php");
+            header("location: ../index.html");
         }
     }catch (exception $e){
         echo '<script> alert("' . $e . '"");</script>';

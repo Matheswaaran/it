@@ -21,7 +21,7 @@
       <link rel="stylesheet" href="../css/table.css">
       <link rel="stylesheet" href="../css/nav.css">
       <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
-      <script type="text/javascript" src="../js/book.js"></script>
+      <script type="text/javascript" src="js/book.js"></script>
   </head>
   <body>
 <!--navigation bar-->
@@ -30,9 +30,9 @@
     <label for="burger"> <span></span> <span></span> <span></span> </label>
     <nav>
       <ul>
-        <li><a href="home.php">Home</a></li>
+        <li><a href="userProjector.php.php">Home</a></li>
         <li><a href="changepass.html">Change Password</a></li>
-        <li><a href="security/logout.php">Logout</a></li>
+        <li><a href="php/ulogout.php">Logout</a></li>
       </ul>
     </nav><br><br><br><br><br><br>
 

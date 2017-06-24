@@ -1,7 +1,29 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: mat
- * Date: 24/6/17
- * Time: 1:27 PM
- */
+    session_start();
+    include "includes/dbconfig.php";
+    include "includes/sessionUtils.php";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST"){
+        $username = $_POST["Username"];
+        $password = $_POST["Password"];
+        $password = md5($password);
+        $login_err = "";
+
+        $login_query = mysqli_query($db, "SELECT * FROM users WHERE username = '$username' and password = '$password'");
+        $login_result = mysqli_num_rows($login_query);
+        $login_array = mysqli_fetch_array($login_query, MYSQL_ASSOC);
+
+        if ($login_query){
+            if ($login_result == 1){
+                $session = new sessionUtils();
+                $session->UserLogin($login_array['uid'],$login_array['username']);
+                header("location: ../userProjector.php");
+            }else{
+                echo '<script> alert("Invalid credentials");</script>';
+                echo '<script> window.location="../../index.html"; </script>';
+            }
+        }else{
+            echo '<script> alert("Login Error. Please Try Again.");</script>';
+            echo '<script> window.location="../../index.html"; </script>';
+        }
+    }
