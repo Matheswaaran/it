@@ -17,7 +17,7 @@
             if ($login_result == 1){
                 $session = new sessionUtils();
                 $session->UserLogin($login_array['uid'],$login_array['username']);
-                header("location: ../userProjector.php");
+                header("location: ../userHome.php");
             }else{
                 echo '<script> alert("Invalid credentials");</script>';
                 echo '<script> window.location="../../index.html"; </script>';

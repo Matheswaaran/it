@@ -1,8 +1,8 @@
 // JavaScript Document
-function updateBookstatus(date,day,hour){
+function updateBookstatus(date,day,hour,type){
 	$.ajax({                                      
       url: 'php/book.php',
-      data: "date="+date+"&day="+day+"&hour="+hour,
+      data: "date="+date+"&day="+day+"&hour="+hour+"&type="+type,
 	  type:"POST",                        
       success: function(data){
 		  alert(data);
@@ -11,10 +11,10 @@ function updateBookstatus(date,day,hour){
     });	
 	
 }
-function updateCancelstatus(date,day,hour){
+function updateCancelstatus(date,day,hour,type){
 	$.ajax({                                      
       url: 'php/cancel.php',
-      data: "date="+date+"&day="+day+"&hour="+hour,
+      data: "date="+date+"&day="+day+"&hour="+hour+"&type="+type,
 	  type:"POST",                        
       success: function(data){
 		  alert(data);

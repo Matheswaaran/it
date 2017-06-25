@@ -30,7 +30,9 @@
     <label for="burger"> <span></span> <span></span> <span></span> </label>
     <nav>
       <ul>
-        <li><a href="userProjector.php.php">Home</a></li>
+        <li><a href="userHome.php">Home</a></li>
+        <li><a href="userProjector.php">Book Projector</a></li>
+        <li><a href="userSeminarHall.php">Book Seminar Hall</a></li>
         <li><a href="changepass.html">Change Password</a></li>
         <li><a href="php/ulogout.php">Logout</a></li>
       </ul>
@@ -60,70 +62,70 @@
           <td class='time'><font size="3"><?php echo $date; ?></font><br><br><?php echo $day; ?></td>
           <!-- Hour 1 -->
           <?php if ($query_result['hour1'] == ''){ ?>
-            <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','1')">BOOK NOW</a></td>
+            <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','1','projector')">BOOK NOW</a></td>
           <?php }else { 
                     if ($query_result['hour1'] == $username){ ?>
-                      <td class='orange' data-tooltip='Click to cancel'><a href="javascript://" onClick="updateCancelstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','1')">CANCEL BOOKING</a></td>
+                      <td class='orange' data-tooltip='Click to cancel'><a href="javascript://" onClick="updateCancelstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','1','projector')">CANCEL BOOKING</a></td>
                       <?php } else { ?>
             <td class='red' data-tooltip='Booked by <?php echo $query_result['hour1']; ?>'>NOT AVAILABLE</td>
           <?php } } ?>
 
           <!-- Hour 2 -->
           <?php if ($query_result['hour2'] == ''){ ?>
-            <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','2')">BOOK NOW</a></td>
+            <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','2','projector')">BOOK NOW</a></td>
           <?php }else { 
                     if ($query_result['hour2'] == $username){ ?>
-                      <td class='orange' data-tooltip='Click to cancel'><a href="javascript://" onClick="updateCancelstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','2')">CANCEL BOOKING</a></td>
+                      <td class='orange' data-tooltip='Click to cancel'><a href="javascript://" onClick="updateCancelstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','2','projector')">CANCEL BOOKING</a></td>
                       <?php } else { ?>
             <td class='red' data-tooltip='Booked by <?php echo $query_result['hour2']; ?>'>NOT AVAILABLE</td>
           <?php } } ?>
 
           <!-- Hour 3 -->
           <?php if ($query_result['hour3'] == ''){ ?>
-            <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','3')">BOOK NOW</a></td>
+            <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','3','projector')">BOOK NOW</a></td>
           <?php }else { 
                     if ($query_result['hour3'] == $username){ ?>
-                      <td class='orange' data-tooltip='Click to cancel'><a href="javascript://" onClick="updateCancelstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','3')">CANCEL BOOKING</a></td>
+                      <td class='orange' data-tooltip='Click to cancel'><a href="javascript://" onClick="updateCancelstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','3','projector')">CANCEL BOOKING</a></td>
                       <?php } else { ?>
             <td class='red' data-tooltip='Booked by <?php echo $query_result['hour3']; ?>'>NOT AVAILABLE</td>
           <?php } } ?>
 
           <!-- Hour 1 -->
           <?php if ($query_result['hour4'] == ''){ ?>
-            <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','4')">BOOK NOW</a></td>
+            <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','4','projector')">BOOK NOW</a></td>
           <?php }else { 
                     if ($query_result['hour4'] == $username){ ?>
-                      <td class='orange' data-tooltip='Click to cancel'><a href="javascript://" onClick="updateCancelstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','4')">CANCEL BOOKING</a></td>
+                      <td class='orange' data-tooltip='Click to cancel'><a href="javascript://" onClick="updateCancelstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','4','projector')">CANCEL BOOKING</a></td>
                       <?php } else { ?>
             <td class='red' data-tooltip='Booked by <?php echo $query_result['hour4']; ?>'>NOT AVAILABLE</td>
           <?php } } ?>
 
           <!-- Hour 1 -->
           <?php if ($query_result['hour5'] == ''){ ?>
-            <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','5')">BOOK NOW</a></td>
+            <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','5','projector')">BOOK NOW</a></td>
           <?php }else { 
                     if ($query_result['hour5'] == $username){ ?>
-                      <td class='orange' data-tooltip='Click to cancel'><a href="javascript://" onClick="updateCancelstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','5')">CANCEL BOOKING</a></td>
+                      <td class='orange' data-tooltip='Click to cancel'><a href="javascript://" onClick="updateCancelstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','5','projector')">CANCEL BOOKING</a></td>
                       <?php } else { ?>
             <td class='red' data-tooltip='Booked by <?php echo $query_result['hour5']; ?>'>NOT AVAILABLE</td>
           <?php } } ?>
 
           <!-- Hour 1 -->
           <?php if ($query_result['hour6'] == ''){ ?>
-            <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','6')">BOOK NOW</a></td>
+            <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','6','projector')">BOOK NOW</a></td>
           <?php }else { 
                     if ($query_result['hour6'] == $username){ ?>
-                      <td class='orange' data-tooltip='Click to cancel'><a href="javascript://" onClick="updateCancelstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','6')">CANCEL BOOKING</a></td>
+                      <td class='orange' data-tooltip='Click to cancel'><a href="javascript://" onClick="updateCancelstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','6','projector')">CANCEL BOOKING</a></td>
                       <?php } else { ?>
             <td class='red' data-tooltip='Booked by <?php echo $query_result['hour6']; ?>'>NOT AVAILABLE</td>
           <?php } } ?>
 
           <!-- Hour 1 -->
           <?php if ($query_result['hour7'] == ''){ ?>
-            <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','7')">BOOK NOW</a></td>
+            <td class='green' data-tooltip='Available'><a href="javascript://" onClick="updateBookstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','7','projector')">BOOK NOW</a></td>
           <?php }else { 
                     if ($query_result['hour7'] == $username){ ?>
-                      <td class='orange' data-tooltip='Click to cancel'><a href="javascript://" onClick="updateCancelstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','7')">CANCEL BOOKING</a></td>
+                      <td class='orange' data-tooltip='Click to cancel'><a href="javascript://" onClick="updateCancelstatus('<?php echo $dbdate; ?>','<?php echo $day; ?>','7','projector')">CANCEL BOOKING</a></td>
                       <?php } else { ?>
             <td class='red' data-tooltip='Booked by <?php echo $query_result['hour7']; ?>'>NOT AVAILABLE</td>
           <?php } } ?>
