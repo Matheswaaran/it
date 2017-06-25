@@ -10,7 +10,7 @@
   $day = date("l",$timestamp);
   //Clearing the old records...
   // $clear_sql = "DELETE FROM projector WHERE bookdate < '$dbdate'";
-//  mysqli_query($db,$clear_sql);
+  // mysqli_query($db,$clear_sql);
   
 ?>
 <!DOCTYPE html>
@@ -53,8 +53,8 @@
           <th>VIIth Hour</th>
         </tr>
         <?php for ($i=0; $i <30; $i++) { 
-		      $dbdate =  date("Y-m-d",$timestamp);
-      		$select_sql = "SELECT * FROM projector WHERE bookdate = '$dbdate'";
+		  $dbdate =  date("Y-m-d",$timestamp);
+      	  $select_sql = "SELECT * FROM projector WHERE bookdate = '$dbdate'";
           $select_result = mysqli_query($db,$select_sql);
           $query_result = mysqli_fetch_array($select_result);
         ?>

@@ -4,9 +4,10 @@
     include "includes/sessionUtils.php";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
+        $session = new sessionUtils();
         $username = $_POST["Username"];
         $password = $_POST["Password"];
-        $password = md5($password);
+        $password = $session->encryptIt($password);
         $login_err = "";
 
         $login_query = mysqli_query($db, "SELECT * FROM users WHERE username = '$username' and password = '$password'");
@@ -15,7 +16,6 @@
 
         if ($login_query){
             if ($login_result == 1){
-                $session = new sessionUtils();
                 $session->UserLogin($login_array['uid'],$login_array['username']);
                 header("location: ../userHome.php");
             }else{

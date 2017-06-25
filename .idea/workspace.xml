@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02d827cb-d358-4b6d-8593-88ca5ca0fac9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projector/book.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projector/cancel.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projector/home.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seminarhall/book.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seminarhall/cancel.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/seminarhall/index.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/php/includes/sessionUtils.php" afterPath="$PROJECT_DIR$/users/php/includes/sessionUtils.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/php/includes/usession.php" afterPath="$PROJECT_DIR$/users/php/includes/usession.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/php/ulogin.php" afterPath="$PROJECT_DIR$/users/php/ulogin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/userHome.php" afterPath="$PROJECT_DIR$/users/userHome.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/userProjector.php" afterPath="$PROJECT_DIR$/users/userProjector.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,11 +31,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="userHome.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="userHome.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/userHome.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="7" lean-forward="false" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+            <state relative-caret-position="15">
+              <caret line="1" column="40" lean-forward="false" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="usession.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/php/includes/usession.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+              <folding>
+                <marker date="1498384701598" expanded="true" signature="184:234" ph="SELECT * FRO... users" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ulogin.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/php/ulogin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="51" lean-forward="true" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+              <folding>
+                <marker date="1498384204148" expanded="true" signature="392:467" ph="SELECT * FRO... users" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="userProjector.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/userProjector.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1706">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1498382555282" expanded="true" signature="1955:2005" ph="SELECT * FRO... projector" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sessionUtils.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/users/php/includes/sessionUtils.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -68,14 +113,15 @@
         <option value="$PROJECT_DIR$/admin/php/includes/sessionUtils.php" />
         <option value="$PROJECT_DIR$/admin/php/includes/asession.php" />
         <option value="$PROJECT_DIR$/users/userHome.html" />
-        <option value="$PROJECT_DIR$/users/php/includes/usession.php" />
-        <option value="$PROJECT_DIR$/users/php/ulogin.php" />
-        <option value="$PROJECT_DIR$/users/userHome.php" />
-        <option value="$PROJECT_DIR$/users/userProjector.php" />
         <option value="$PROJECT_DIR$/users/js/book.js" />
         <option value="$PROJECT_DIR$/users/php/cancel.php" />
         <option value="$PROJECT_DIR$/users/userSeminarHall.php" />
         <option value="$PROJECT_DIR$/users/php/book.php" />
+        <option value="$PROJECT_DIR$/users/userProjector.php" />
+        <option value="$PROJECT_DIR$/users/php/ulogin.php" />
+        <option value="$PROJECT_DIR$/users/php/includes/sessionUtils.php" />
+        <option value="$PROJECT_DIR$/users/userHome.php" />
+        <option value="$PROJECT_DIR$/users/php/includes/usession.php" />
       </list>
     </option>
   </component>
@@ -565,7 +611,7 @@
       <workItem from="1498298865041" duration="24000" />
       <workItem from="1498319726744" duration="1886000" />
       <workItem from="1498361745052" duration="320000" />
-      <workItem from="1498363175957" duration="3079000" />
+      <workItem from="1498363175957" duration="6097000" />
     </task>
     <task id="LOCAL-00001" summary="Deleted _notes">
       <created>1498121917672</created>
@@ -588,11 +634,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498380381973</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="unwanted removed">
+      <created>1498380516973</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1498380516974</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13201000" />
+    <option name="totallyTimeSpent" value="16219000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -605,6 +658,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="744" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -621,7 +675,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17205882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17205882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -647,7 +701,8 @@
     <MESSAGE value="Deleted _notes" />
     <MESSAGE value="Added Some Changes" />
     <MESSAGE value="Added:&#10;userSeminarhall&#10;userProjector&#10;used IF in book.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added:&#10;userSeminarhall&#10;userProjector&#10;used IF in book.php" />
+    <MESSAGE value="unwanted removed" />
+    <option name="LAST_COMMIT_MESSAGE" value="unwanted removed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -671,7 +726,7 @@
         <state relative-caret-position="420">
           <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
           <folding>
-            <marker date="1498322229724" expanded="true" signature="337:412" ph="SELECT * FRO... users" />
+            <marker date="1498384204148" expanded="true" signature="392:467" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -691,8 +746,7 @@
         <state relative-caret-position="1035">
           <caret line="69" column="62" lean-forward="true" selection-start-line="69" selection-start-column="62" selection-end-line="69" selection-end-column="62" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1498379732400" expanded="true" signature="1957:2007" ph="SELECT * FRO... projector" />
+            <marker date="1498382555282" expanded="true" signature="1955:2005" ph="SELECT * FRO... projector" />
           </folding>
         </state>
       </provider>
@@ -710,7 +764,7 @@
         <state relative-caret-position="420">
           <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
           <folding>
-            <marker date="1498322229724" expanded="true" signature="337:412" ph="SELECT * FRO... users" />
+            <marker date="1498384204148" expanded="true" signature="392:467" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -730,8 +784,7 @@
         <state relative-caret-position="945">
           <caret line="63" column="53" lean-forward="true" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="53" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1498379732400" expanded="true" signature="1957:2007" ph="SELECT * FRO... projector" />
+            <marker date="1498382555282" expanded="true" signature="1955:2005" ph="SELECT * FRO... projector" />
           </folding>
         </state>
       </provider>
@@ -741,8 +794,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1498379732400" expanded="true" signature="1957:2007" ph="SELECT * FRO... projector" />
+            <marker date="1498382555282" expanded="true" signature="1955:2005" ph="SELECT * FRO... projector" />
           </folding>
         </state>
       </provider>
@@ -753,7 +805,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1498322229724" expanded="true" signature="337:412" ph="SELECT * FRO... users" />
+            <marker date="1498384204148" expanded="true" signature="392:467" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -862,20 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/php/includes/usession.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/php/includes/sessionUtils.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/php/includes/dbconfig.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -907,33 +945,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/userProjector.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="131" column="13" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="147" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1498379732400" expanded="true" signature="1957:2007" ph="SELECT * FRO... projector" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/userSeminarHall.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="55" column="48" lean-forward="true" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
           <folding>
             <marker date="1498379892375" expanded="true" signature="1910:1962" ph="SELECT * FRO... seminarhall" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/php/ulogin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <marker date="1498322229724" expanded="true" signature="337:412" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -966,10 +983,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/users/php/ulogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="51" lean-forward="true" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+          <folding>
+            <marker date="1498384204148" expanded="true" signature="392:467" ph="SELECT * FRO... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/users/userHome.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="7" lean-forward="false" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        <state relative-caret-position="15">
+          <caret line="1" column="40" lean-forward="false" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/php/includes/usession.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding>
+            <marker date="1498384701598" expanded="true" signature="184:234" ph="SELECT * FRO... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/userProjector.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1706">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1498382555282" expanded="true" signature="1955:2005" ph="SELECT * FRO... projector" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/php/includes/sessionUtils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
           <folding />
         </state>
       </provider>
