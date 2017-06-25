@@ -1,5 +1,6 @@
 <?php
     include 'dbconfig.php';
+    include 'sessionUtils.php';
     session_start();
 
     try{
