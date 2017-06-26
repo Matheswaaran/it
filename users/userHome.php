@@ -1,8 +1,9 @@
 <?php
-    include "php/includes/usession.php";
+    include "php/includes/sessionUtils.php";
+    $session = new sessionUtils();
     $username = $_SESSION['user_username'];
     $uid = $_SESSION['user_id'];
-    $session = new sessionUtils();
+    $session->checkSession($username);
 ?>
 
 <html>
@@ -11,7 +12,6 @@
     </head>
     <body>
         <h1>Welcome <?php echo $username;?></h1>
-        <h1><?php echo $session->decryptIt($row['password']); ?></h1>
         <a href="userProjector.php">Pojector</a>
         <a href="userSeminarHall.php">SeminarHall</a>
         <a href="php/ulogout.php">Logout</a>

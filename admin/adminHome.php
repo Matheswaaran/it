@@ -1,6 +1,9 @@
 <?php
-    include "php/includes/asession.php";
+    include "php/includes/sessionUtils.php";
+    $session = new sessionUtils();
     $username = $_SESSION['admin_username'];
+    $id = $_SESSION['admin_id'];
+    $session->checkSession($username);
 ?>
 
 <html>
